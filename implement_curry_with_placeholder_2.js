@@ -7,7 +7,7 @@
 function curry(fn) {
   // your code here
   return function namedFunc(...args) {
-    const allSet = args.slice(0,3).every(
+    const allSet = args.slice(0,fn.length).every(
       (element) => !Object.is(curry.placeholder, element)
     );
     if (args.length >= 3 && allSet) {
